@@ -1,0 +1,34 @@
+{
+  "name": "@ondrej-blazek/core",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Ondrej Blazek",
+  "description": "ThreeJS through web-components.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ondrej-blazek/wc_three_demo.git"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve --port=3500",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.14.0",
+    "@stencil/sass": "^1.5.2",
+    "three": "0.131.3"
+  }
+}
